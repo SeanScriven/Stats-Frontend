@@ -5,8 +5,39 @@
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 48px;
+  max-width: 1200px;
+  margin: 0 auto 48px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #3b82f6;
+  }
+}
+
+.backArrow {
+  font-size: 1.1rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .title {
@@ -29,7 +60,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -39,7 +70,6 @@
   background: #111827 !important;
   border: 1px solid #1f2937 !important;
   border-radius: 12px !important;
-  cursor: pointer;
   transition: all 0.2s ease !important;
   overflow: hidden !important;
 
@@ -75,12 +105,12 @@
   object-fit: contain;
 }
 
-.leagueInfo {
+.teamInfo {
   flex: 1;
   min-width: 0;
 }
 
-.leagueName {
+.teamName {
   font-family: 'Inter', sans-serif;
   font-weight: 600 !important;
   font-size: 0.95rem !important;
@@ -90,7 +120,7 @@
   text-overflow: ellipsis;
 }
 
-.leagueMeta {
+.teamMeta {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -110,22 +140,20 @@
   font-family: 'Inter', sans-serif;
 }
 
-.leagueType {
-  font-size: 0.7rem !important;
-  color: #3b82f6 !important;
-  background: rgba(59, 130, 246, 0.1);
-  padding: 2px 8px;
-  border-radius: 4px;
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #6b7280;
   font-family: 'Inter', sans-serif;
-  font-weight: 500 !important;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  gap: 8px;
 }
 
-.arrow {
-  color: #374151 !important;
-  font-size: 1.2rem !important;
-  flex-shrink: 0;
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 8px;
 }
 
 .loading {

@@ -1,15 +1,16 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-import './App.css';
-import Leagues from './pages/Leagues';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LeaguesPage from './pages/Leagues/Leagues.lazy';
+import TeamsPage from './pages/Teams/Teams.lazy';
 
 function App() {
   return (
-    <div>
-      <Leagues />
-    </div>
+    <Suspense fallback={<p>Loading...</p>}>
+      <Routes>
+        <Route path="/" element={<LeaguesPage />} />
+        <Route path="/leagues/:leagueId/teams" element={<TeamsPage />} />
+      </Routes>
+    </Suspense>
   );
 }
 
