@@ -1,5 +1,5 @@
 import httpClient from '../api/http-client';
-import type { League } from '../types/league';
+import type { League } from '../types';
 
 export const getLeagues = async (): Promise<League[]> => {
   const response = await httpClient.get<League[]>('/leagues/');

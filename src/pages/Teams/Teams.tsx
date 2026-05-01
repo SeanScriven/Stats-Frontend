@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CircularProgress, Typography } from '@mui/material';
-import type { Team } from '../../types/team';
+import type { Team } from '../../types';
 import { getTeamsByLeague } from '../../services/teamService';
 import styles from './Teams.module.scss';
 

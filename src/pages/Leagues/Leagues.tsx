@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CircularProgress, Typography } from '@mui/material';
 
-import type { League } from '../../types/league';
+import type { League } from '../../types';
 import { getLeagues } from '../../services/leagueService';
 import styles from './Leagues.module.scss';
 
@@ -58,7 +58,7 @@ function Leagues() {
           <Card
             key={league.id}
             className={styles.card}
-            onClick={() => navigate(`/leagues/${league.id}/teams`)}
+            onClick={() => navigate(`/leagues/${league.id}`)}
           >
             <CardContent className={styles.cardContent}>
               <div className={styles.logoContainer}>

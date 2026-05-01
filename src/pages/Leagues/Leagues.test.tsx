@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import Leagues from './Leagues';
 import * as leagueService from '../../services/leagueService';
-import type { League } from '../../types/league';
+import type { League } from '../../types';
 
 const mockLeagues: League[] = [
   {

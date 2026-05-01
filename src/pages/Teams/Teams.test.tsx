@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import Teams from './Teams';
 import * as teamService from '../../services/teamService';
-import type { Team } from '../../types/team';
+import type { Team } from '../../types';
 
 const mockTeams: Team[] = [
   {

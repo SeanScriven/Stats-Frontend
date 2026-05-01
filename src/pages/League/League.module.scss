@@ -1,0 +1,305 @@
+.container {
+  min-height: 100vh;
+  background-color: #0a0e1a;
+  padding: 48px 24px;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #3b82f6;
+  }
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 4rem !important;
+  letter-spacing: 4px !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  line-height: 1 !important;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  color: #6b7280 !important;
+  font-size: 0.85rem !important;
+  margin-top: 8px !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tabsWrapper {
+  border-bottom: 1px solid #1f2937;
+  margin-bottom: 32px;
+}
+
+.tab {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: #6b7280 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  min-width: 120px !important;
+
+  &:global(.Mui-selected) {
+    color: #3b82f6 !important;
+  }
+}
+
+// standings table
+.table {
+  background: transparent !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tableHead {
+  background: #111827;
+
+  th {
+    color: #6b7280 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1f2937 !important;
+    padding: 14px 16px !important;
+  }
+}
+
+.tableRow {
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: #111827 !important;
+  }
+
+  td {
+    color: #f9fafb !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9rem !important;
+    border-bottom: 1px solid #1f2937 !important;
+    padding: 14px 16px !important;
+  }
+}
+
+.position {
+  color: #6b7280 !important;
+  font-weight: 600 !important;
+  width: 40px;
+}
+
+.teamCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.teamLogo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.teamName {
+  font-weight: 600 !important;
+  color: #f9fafb !important;
+}
+
+.points {
+  color: #3b82f6 !important;
+  font-weight: 700 !important;
+}
+
+.form {
+  display: flex;
+  gap: 4px;
+}
+
+.formW {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: #16a34a;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formL {
+  @extend .formW;
+  background: #dc2626;
+}
+
+.formD {
+  @extend .formW;
+  background: #6b7280;
+}
+
+// games
+.gameslist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gameCard {
+  background: #111827 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 12px !important;
+}
+
+.gameCardContent {
+  padding: 16px 20px !important;
+}
+
+.gameWeek {
+  font-size: 0.72rem !important;
+  color: #6b7280 !important;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px !important;
+}
+
+.gameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.gameTeam {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+
+  &.away {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+.gameTeamLogo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.gameTeamName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  color: #f9fafb !important;
+}
+
+.scoreBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.score {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1.8rem !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+  min-width: 32px;
+  text-align: center;
+}
+
+.scoreDivider {
+  color: #374151 !important;
+  font-size: 1.2rem !important;
+}
+
+.statusBadge {
+  font-size: 0.7rem !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 10px !important;
+  display: inline-block;
+}
+
+.statusFT {
+  @extend .statusBadge;
+  background: rgba(107, 114, 128, 0.2);
+  color: #6b7280;
+}
+
+.statusLive {
+  @extend .statusBadge;
+  background: rgba(220, 38, 38, 0.2);
+  color: #ef4444;
+}
+
+.statusUpcoming {
+  @extend .statusBadge;
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a0e1a;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a0e1a;
+  color: #ef4444;
+  font-family: 'Inter', sans-serif;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+  gap: 8px;
+}
